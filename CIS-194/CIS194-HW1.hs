@@ -17,9 +17,9 @@ sumDigits (x:xs) | x < 10    = x + sumDigits xs
                  | otherwise = (div x 10) + (rem x 10) + sumDigits xs
 
 doubleEveryOther' :: [Integer] -> [Integer]
-doubleEveryOther'  [] = []
-doubleEveryOther' [x] = [x]
-doubleEveryOther' [x,y] = [x] ++ [2*y]
+doubleEveryOther'  []      = []
+doubleEveryOther' [x]      = [x]
+doubleEveryOther' [x,y]    = [x] ++ [2*y]
 doubleEveryOther' (x:y:xs) = [x] ++ [2*y] ++ (doubleEveryOther' xs)
 
 doubleEveryOther :: [Integer] -> [Integer]
